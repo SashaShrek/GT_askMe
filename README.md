@@ -1,3 +1,5 @@
+[![CodeFactor](https://www.codefactor.io/repository/github/sashashrek/gt_askme/badge)](https://www.codefactor.io/repository/github/sashashrek/gt_askme)
+
 # GT_askMe
 Запуск различных тасков и различного их количества
 
