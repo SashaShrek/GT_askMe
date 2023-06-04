@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<Config>
+    <ActionDefault>all</ActionDefault>
+    <Tasks>
+        <Task>
+            <Name>Out</Name>
+            <Command>echo Hello!</Command>
+            <SystemFlag>Y</SystemFlag>
+        </Task>
+        <Task>
+            <Name>Test</Name>
+            <Command>notepad</Command>
+            <SystemFlag>N</SystemFlag>
+        </Task>
+    </Tasks>
+</Config>
