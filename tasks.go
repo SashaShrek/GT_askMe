@@ -34,10 +34,12 @@ func StartTask(task string, name_task string, param string) error {
 	}
 	if param == "Y" {
 		cmd = exec.Command("cmd", "/C", task)
-		err = cmd.Run()
+		stdout, err := cmd.CombinedOutput()
+		//err = cmd.Run()
 		if err != nil {
 			return err
 		}
+		fmt.Printf("%s", stdout)
 	} else {
 		cmd = exec.Command(task)
 		err = cmd.Start()
@@ -72,7 +74,7 @@ func CheckTask(tsks []string, tsk []Task) []Task {
 /*?*/
 func ScanTasks(tsks []Task) bool {
 	for _, val := range tsks {
-		if strings.Split(val.Name, " ")[0] == "not" {
+		if val.Name == "" || len(strings.Split(val.Name, ";")) > 1 {
 			return false
 		}
 	}
